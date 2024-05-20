@@ -10,6 +10,7 @@ public class MemoryDemo {
         System.out.println();
         System.out.println(line);
         System.out.println("The end");
+        System.out.println("Test message");
     }
 
     public static void doSomething() {
