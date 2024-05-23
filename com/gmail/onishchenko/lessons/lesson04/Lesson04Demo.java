@@ -9,6 +9,8 @@ public class Lesson04Demo {
         System.out.println("a is " + a);
         System.out.println("-a is " + b);
 
+        System.out.println("|b| = " + Math.abs(b));
+
         b = 10;
         System.out.println("42 % 10 is " + b); // 42 - (42 / 10) * 10 == 42 - 4 * 10 == 2
         int result = 10 % 42;
@@ -34,5 +36,6 @@ public class Lesson04Demo {
         result = a++ + 100;
         System.out.println("post-increment: " + result);
         System.out.println("post-increment (a): " + a);
+
     }
 }
