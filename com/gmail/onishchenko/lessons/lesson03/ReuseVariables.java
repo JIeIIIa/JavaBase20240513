@@ -15,5 +15,7 @@ public class ReuseVariables {
 
         System.out.print("Value is ");
         System.out.println(value);
+
+        System.out.println("The end)");
     }
 }
