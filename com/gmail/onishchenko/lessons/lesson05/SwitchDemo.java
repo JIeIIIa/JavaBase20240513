@@ -8,23 +8,33 @@ public class SwitchDemo {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Input a: ");
         int a = scanner.nextInt();
+        int b = 10;
 //        int a = 20;
         scanner.nextLine();
         String line = scanner.nextLine();
         System.out.println("Line was: '" + line + "'");
 
         System.out.println("    IF-ELSE-IF");
-        if (a == 10) {
+        if (a == 10 || a == 20) {
             System.out.println("Good number");
             System.out.println("Do something)");
-        } else if (a == 20) {
-            System.out.println("Good number");
-            System.out.println("Do something)");
-        } else if (a == 13) {
+        } else if ((a == 13) && (b % 2 == 0)) {
             System.out.println("not so good");
         } else {
             System.out.println("Don't know");
         }
+
+
+// !(a == 10 | a == 20) ==
+// (!(a == 10) & (!(a == 20))) ==
+// a != 10 & a != 20
+
+// a == !!a
+
+        if (!(b % 2 == 0)) {
+            System.out.println("mod is ZERO");
+        }
+
 
         System.out.println();
         System.out.println("    SWITCH");
