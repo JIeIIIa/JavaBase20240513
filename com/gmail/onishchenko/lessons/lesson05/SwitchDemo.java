@@ -1,10 +1,17 @@
 package com.gmail.onishchenko.lessons.lesson05;
 
-import java.sql.SQLOutput;
+
+import java.util.Scanner;
 
 public class SwitchDemo {
     public static void main(String[] args) {
-        int a = 20;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Input a: ");
+        int a = scanner.nextInt();
+//        int a = 20;
+        scanner.nextLine();
+        String line = scanner.nextLine();
+        System.out.println("Line was: '" + line + "'");
 
         System.out.println("    IF-ELSE-IF");
         if (a == 10) {
