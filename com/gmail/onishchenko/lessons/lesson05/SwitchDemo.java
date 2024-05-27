@@ -19,6 +19,7 @@ public class SwitchDemo {
             System.out.println("Don't know");
         }
 
+        System.out.println();
         System.out.println("    SWITCH");
         switch (a) {
             case 10:
@@ -33,6 +34,21 @@ public class SwitchDemo {
             default:
                 System.out.println("Don't know");
         }
+
+
+        System.out.println();
+        System.out.println("    SWITCH with String");
+        String answer = "!";
+        switch (answer) {
+            case "ok":
+                System.out.println("All fine");
+                break;
+            case "bad":
+                System.out.println("not so good");
+                break;
+//            case '!': // ERROR: char cannot be converted to java.lang.String
+        }
+
     }
 
 }
