@@ -11,10 +11,28 @@ public class MultiplyTable {
 //        forExample01(limit);
 //        forExample02(limit);
         whileExample(limit);
+        doWhileExample(limit);
         System.out.println("The end");
     }
 
+    private static void doWhileExample(int limit) {
+        System.out.println("   DO-WHILE");
+        int i = 1;
+        do {
+            int j = 1;
+            do {
+                System.out.printf("%d\t", i * j);
+                j++;
+            } while (j <= 10);
+            System.out.println();
+            i++;
+        } while (i <= limit);
+        System.out.println();
+        System.out.println();
+    }
+
     private static void whileExample(int limit) {
+        System.out.println("   WHILE");
         int i = 1;
         while (i <= limit) {
             int j = 1;
@@ -25,6 +43,8 @@ public class MultiplyTable {
             System.out.println();
             i++;
         }
+        System.out.println();
+        System.out.println();
     }
 
     private static void forExample02(int limit) {
