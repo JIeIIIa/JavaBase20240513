@@ -9,18 +9,12 @@ public class MultiplyTable {
         int limit = scanner.nextInt();
 
         for (int i = 1; i <= limit; i++) {
-            System.out.println(makeLine(i));
+            String result = "";
+            for (int j = 1; j <= 10; j++) {
+                result += i * j + "\t";
+            }
+            System.out.println(result);
         }
     }
-
-    public static String makeLine(int base) {
-        String result = "";
-        for (int i = 1; i <= 10; i++) {
-            result += base * i + "\t";
-        }
-
-        return result;
-    }
-
 
 }
