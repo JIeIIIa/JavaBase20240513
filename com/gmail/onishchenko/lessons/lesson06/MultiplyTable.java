@@ -9,8 +9,22 @@ public class MultiplyTable {
         int limit = scanner.nextInt();
 
 //        forExample01(limit);
-        forExample02(limit);
+//        forExample02(limit);
+        whileExample(limit);
         System.out.println("The end");
+    }
+
+    private static void whileExample(int limit) {
+        int i = 1;
+        while (i <= limit) {
+            int j = 1;
+            while (j <= 10) {
+                System.out.printf("%d\t", i * j);
+                j++;
+            }
+            System.out.println();
+            i++;
+        }
     }
 
     private static void forExample02(int limit) {
