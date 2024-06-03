@@ -11,17 +11,19 @@ public class TaxCalculator {
 
         if (profit < 0) {
             System.out.println("Incorrect data (((");
-        } else {
-            double tax;
-            if (profit < 10_000) {
-                tax = profit * 0.025;
-            } else if (profit < 25_000) {
-                tax = profit * 0.043;
-            } else {
-                tax = profit * 0.067;
-            }
-
-            System.out.printf("Your tax == %.2f", tax);
+            return;
         }
+
+        double tax;
+        if (profit < 10_000) {
+            tax = profit * 0.025;
+        } else if (profit < 25_000) {
+            tax = profit * 0.043;
+        } else {
+            tax = profit * 0.067;
+        }
+
+        System.out.printf("Your tax == %.2f", tax);
+
     }
 }
