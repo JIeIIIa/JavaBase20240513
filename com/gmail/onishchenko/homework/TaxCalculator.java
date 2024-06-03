@@ -14,15 +14,16 @@ public class TaxCalculator {
             return;
         }
 
-        double tax;
+        double interestRate;
         if (profit < 10_000) {
-            tax = profit * 0.025;
+            interestRate = 0.025;
         } else if (profit < 25_000) {
-            tax = profit * 0.043;
+            interestRate = 0.043;
         } else {
-            tax = profit * 0.067;
+            interestRate = 0.067;
         }
 
+        double tax = profit * interestRate;
         System.out.printf("Your tax == %.2f", tax);
 
     }
