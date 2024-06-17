@@ -4,10 +4,11 @@ import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class SimpleArrayOperations {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    static Scanner scanner = new Scanner(System.in);
 
-        int size = readInt(scanner, 1, 50);
+    public static void main(String[] args) {
+
+        int size = readInt(1, 50);
         int[] array = generate(size);
 
         System.out.println("Generated array:");
@@ -35,12 +36,12 @@ public class SimpleArrayOperations {
         return array;
     }
 
-    public static int readInt(Scanner scanner, int min, int max) {
+    public static int readInt(int min, int max) {
         while (true) {
             System.out.printf("Enter a number between %d and %d: ", min, max);
             if (scanner.hasNextInt()) {
                 int number = scanner.nextInt();
-                if (number >= min && number < max) {
+                if (number >= min && number <= max) {
                     return number;
                 }
             }
