@@ -1,10 +1,12 @@
 package com.gmail.onishchenko.lessons.lesson09;
 
+import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Lesson09Demo {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4};
+        System.out.println(Arrays.toString(array));
 
         int[][] matrix = new int[3][];
         matrix[0] = new int[]{1, 2, 3, 3, 3, 3, 3,3};
@@ -24,7 +26,11 @@ public class Lesson09Demo {
 
         System.out.println("        Random matrix");
         int[][] randomMatrix = generateRandomMatrix(3, 5);
-        print(randomMatrix);
+//        print(randomMatrix);
+
+        System.out.println(Arrays.deepToString(randomMatrix));
+        randomMatrix = null;
+        System.out.println(Arrays.deepToString(randomMatrix));
     }
 
     private static int[][] generateRandomMatrix(int rows, int columns) {
