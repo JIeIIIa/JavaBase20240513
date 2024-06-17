@@ -12,6 +12,7 @@ public class Lecture10Demo {
 
         double[] doubleArray = {1.2, 1.23456, 3.398475};
         print(doubleArray);
+        System.out.println(toString(doubleArray));
     }
 
     private static void print(int[] array) {
@@ -21,9 +22,24 @@ public class Lecture10Demo {
     }
 
     private static void print(double[] array) {
+        if( array.length == 0) {
+            return;
+        }
         for (int i = 0; i < array.length; i++) {
             System.out.printf("%.3f ", array[i]);
         }
+    }
+
+    private static String toString(double[] array) {
+        if (array.length == 0) {
+            return "[]";
+        }
+        String result = "[";
+        for (int i = 0; i < array.length; i++) {
+            result += String.format("%.3f ", array[i]);
+        }
+        result += "]";
+        return result;
     }
 
 //    private static void print(int[] intArray) {
