@@ -2,16 +2,24 @@ package com.gmail.onishchenko.lessons.lesson11;
 
 public class Device {
      String imei;
+     int year;
 
      public Device() {
-          imei = "default";
+          this("default", 2024);
      }
 
-     public Device(String target) {
-          imei = target;
+     public Device(String imei) {
+          this();
+//          this(imei, 1234);
+          this.imei = imei;
+     }
+
+     public Device(String imei, int year) {
+          this.imei = imei;
+          this.year=  year;
      }
 
      public void describe() {
-          System.out.printf("I'm a device with [imei = %s]\n", imei);
+          System.out.printf("I'm a device with [imei = %s, year = %d]\n", imei, year);
      }
 }
