@@ -1,5 +1,6 @@
 package com.gmail.onishchenko.lessons.lesson11;
 
+
 public class DeviceRunner {
     public static void main(String[] args) {
         Device device = new Device();
@@ -11,5 +12,12 @@ public class DeviceRunner {
         device.imei = "***";
         System.out.println("device.imei = " + device.imei);
         System.out.println("prettyDevice.imei = " + prettyDevice.imei);
+
+        System.out.println("  -= DESCRIBE =-");
+        device.describe();
+        prettyDevice.describe();
     }
+
+
+
 }
