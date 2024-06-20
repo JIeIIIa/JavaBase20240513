@@ -7,8 +7,7 @@ public class DeviceRunner {
         device.imei = "007";
         System.out.println("device.imei = " + device.imei);
 
-        Device prettyDevice = new Device();
-        prettyDevice.imei = "I'm pretty";
+        Device prettyDevice = new Device("I'm pretty");
         device.imei = "***";
         System.out.println("device.imei = " + device.imei);
         System.out.println("prettyDevice.imei = " + prettyDevice.imei);
