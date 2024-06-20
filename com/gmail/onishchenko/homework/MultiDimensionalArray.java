@@ -82,22 +82,22 @@ public class MultiDimensionalArray {
 
     public static long productColumn(int[][] matrix, int column) {
         long result = 1;
-        for (int i = 0; i < matrix.length; i++) {
-            result *= matrix[i][column];
+        for (int[] row : matrix) {
+            result *= row[column];
         }
         return result;
     }
 
     public static long sumColumn(int[][] matrix, int column) {
         long result = 0;
-        for (int i = 0; i < matrix.length; i++) {
-            result += matrix[i][column];
+        for (int[] row : matrix) {
+            result += row[column];
         }
         return result;
     }
 
     public static boolean isMagicSquare(int[][] matrix) {
-        int sum = sumSecondaryDiagonal(matrix);
+        int sum = sumPrimaryDiagonal(matrix);
 
         if (sum != sumSecondaryDiagonal(matrix)) {
             return false;
