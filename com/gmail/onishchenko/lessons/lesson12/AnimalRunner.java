@@ -16,5 +16,11 @@ public class AnimalRunner {
         Animal animal = cat;
         animal.say();
 //        animal.getColor();
+
+        Cat clonedCat = new Cat("Garfild", 1, "black");
+        System.out.println("cat is cloned: " + (cat == clonedCat));
+        System.out.println("cat equals cloned: " + (cat.equals(clonedCat)));
+
+
     }
 }
