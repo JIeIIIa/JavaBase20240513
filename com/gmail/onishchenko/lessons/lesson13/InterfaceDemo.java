@@ -2,25 +2,18 @@ package com.gmail.onishchenko.lessons.lesson13;
 
 public class InterfaceDemo {
     public static void main(String[] args) {
-        Animal[] animals = {
+        Runnable[] runners = {
                 new Dog(),
                 new Cat(),
-                new Cat(),
-                new Dog()
-        };
-
-        Human[] humans = {
                 new Human(1),
+                new Cat(),
                 new Human(4),
+                new Dog(),
                 new Human(42)
         };
 
-        for (Animal animal : animals) {
-            animal.run();
-        }
-
-        for (Human human : humans) {
-            human.run();
+        for (Runnable runner : runners) {
+            runner.run();
         }
     }
 }
