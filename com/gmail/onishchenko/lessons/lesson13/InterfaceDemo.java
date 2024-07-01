@@ -13,7 +13,13 @@ public class InterfaceDemo {
         };
 
         for (Runnable runner : runners) {
-            runner.run();
+            if (runner instanceof FastRunnable) {
+                ((FastRunnable) runner).runVeryFast();
+            } else {
+                runner.run();
+            }
         }
+
+        ((Writable) runners[2]).write();
     }
 }
