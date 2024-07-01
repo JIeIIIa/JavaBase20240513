@@ -8,4 +8,8 @@ public interface Runnable {
     default void runSlow() {
         System.out.println("Run slow (");
     }
+
+    default void method(Cat cat) {
+        System.out.println("call method: " + cat);
+    }
 }
