@@ -13,7 +13,9 @@ public class InterfaceDemo {
         };
 
         for (Runnable runner : runners) {
-            if (runner instanceof FastRunnable) {
+            if (runner instanceof Dog) {
+                runner.runSlow();
+            } else if (runner instanceof FastRunnable) {
                 ((FastRunnable) runner).runVeryFast();
             } else {
                 runner.run();
@@ -21,5 +23,11 @@ public class InterfaceDemo {
         }
 
         ((Writable) runners[2]).write();
+
+        Human human = new Human(123);
+        System.out.println(((Writable) human).SOME_FIELD);
+
+        Dog dog = new Dog();
+        System.out.println(dog.SOME_FIELD);
     }
 }
