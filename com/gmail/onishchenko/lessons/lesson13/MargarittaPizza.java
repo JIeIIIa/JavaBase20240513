@@ -1,7 +1,16 @@
 package com.gmail.onishchenko.lessons.lesson13;
 
-public class MargarittaPizza extends Pizza{
+import java.util.Arrays;
+
+public class MargarittaPizza extends Pizza {
     public MargarittaPizza() {
-        super("Margaritta", new String[]{"tomato", "cheese"});
+        super("Margaritta");
+    }
+
+    @Override
+    public void addIngredients() {
+        System.out.println("Adding ingredients...");
+        System.out.println("\ttomato");
+        System.out.println("\tcheese");
     }
 }

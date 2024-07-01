@@ -10,5 +10,7 @@ public class PizzaRunner {
         for (Pizza pizza : pizzas) {
             pizza.make();
         }
+
+//        Pizza pizza = new Pizza(); // Pizza is abstract; cannot be instantiated
     }
 }
