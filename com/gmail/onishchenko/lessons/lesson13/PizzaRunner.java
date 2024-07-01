@@ -12,5 +12,14 @@ public class PizzaRunner {
         }
 
 //        Pizza pizza = new Pizza(); // Pizza is abstract; cannot be instantiated
+
+        printInfo(pizzas);
+
+    }
+
+    private static void printInfo(Pizza[] pizzas) {
+        for (Pizza pizza : pizzas) {
+            System.out.println(pizza);
+        }
     }
 }

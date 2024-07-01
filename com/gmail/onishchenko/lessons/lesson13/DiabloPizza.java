@@ -10,4 +10,9 @@ public class DiabloPizza extends Pizza {
         System.out.println("Adding ingredients...");
         System.out.println("\tchilly");
     }
+
+    @Override
+    public String toString() {
+        return "I'm DiabloPizza";
+    }
 }

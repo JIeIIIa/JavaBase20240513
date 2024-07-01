@@ -18,6 +18,11 @@ public abstract class Pizza {
     }
 
     public abstract void addIngredients();
+
+    @Override
+    public String toString() {
+        return "I'm abstract Pizza";
+    }
 }
 
 
