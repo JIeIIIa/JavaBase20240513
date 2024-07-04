@@ -3,8 +3,20 @@ package com.gmail.onishchenko.lessons.lesson14;
 public class TriangleRunner {
     public static void main(String[] args) {
 //        staticNestedClasses();
-        localInnerClasses();
+//        localInnerClasses();
+        anonymousClasses();
 
+    }
+
+    private static void anonymousClasses() {
+
+        Runnable anonymousClass = new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("Do something");
+            }
+        };
+        anonymousClass.run();
     }
 
     private static void staticNestedClasses() {
