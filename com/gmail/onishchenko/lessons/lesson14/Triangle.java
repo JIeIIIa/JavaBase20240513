@@ -29,7 +29,7 @@ public class Triangle {
     }
 
 
-    static class Edge {
+    public static class Edge {
         private int length;
         private String color;
 
