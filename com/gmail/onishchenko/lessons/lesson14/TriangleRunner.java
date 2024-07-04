@@ -16,5 +16,9 @@ public class TriangleRunner {
         System.out.println(anotherTriangle);
         edges[1] = new Triangle.Edge(-12345678, "white");
         System.out.println(anotherTriangle);
+
+        System.out.println();
+        System.out.println(" -= Call some info from outer class");
+        edges[0].outerInfo();
     }
 }

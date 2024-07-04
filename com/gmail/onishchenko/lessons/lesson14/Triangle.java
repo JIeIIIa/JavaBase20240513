@@ -3,6 +3,7 @@ package com.gmail.onishchenko.lessons.lesson14;
 import java.util.Arrays;
 
 public class Triangle {
+    private static final int EDGE_COUNT = 3;
     private Edge[] sides;
 
     public Triangle(int a, int b, int c) {
@@ -14,7 +15,7 @@ public class Triangle {
     }
 
     public Triangle(Edge[] sides) {
-        if (sides.length != 3) {
+        if (sides.length != EDGE_COUNT) {
             System.out.println("ERROR!!!");
         }
         this.sides = sides;
@@ -27,6 +28,7 @@ public class Triangle {
                 '}';
     }
 
+
     static class Edge {
         private int length;
         private String color;
@@ -34,6 +36,11 @@ public class Triangle {
         public Edge(int length, String color) {
             this.length = length;
             this.color = color;
+        }
+
+        public void outerInfo() {
+            System.out.println("EDGE_COUNT == " + EDGE_COUNT);
+//            System.out.println(sides); // error
         }
 
         @Override
