@@ -17,6 +17,14 @@ public class Car {
         this.engine = engine;
     }
 
+    @Override
+    public String toString() {
+        return "Car{" +
+                "brand='" + brand + '\'' +
+                '}';
+    }
+
+
     public class Engine {
         private String brand;
 
@@ -25,7 +33,15 @@ public class Car {
         }
 
         public void enable() {
-            System.out.println("Engine [" + brand + "] is enabled!");
+            System.out.println("Engine [" + brand + "] in car [" + Car.this.brand + "] is enabled!");
+        }
+
+        @Override
+        public String toString() {
+            return "Engine{" +
+                    "brand='" + brand + '\'' +
+                    "car='" + Car.this.toString() + '\'' +
+                    '}';
         }
     }
 
