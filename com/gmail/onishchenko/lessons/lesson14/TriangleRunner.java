@@ -11,9 +11,16 @@ public class TriangleRunner {
     private static void anonymousClasses() {
 
         Runnable anonymousClass = () -> System.out.println("Do something");
-
-
         anonymousClass.run();
+
+        String prefix = "Printing... ";
+        Writable writable = (t) -> {
+            System.out.println(prefix);
+            System.out.println(t);
+        };
+        writable.write("qwerty");
+
+//        prefix = "new value";  // local variables referenced from a lambda expression must be final or effectively final
     }
 
     private static void staticNestedClasses() {
@@ -68,4 +75,8 @@ public class TriangleRunner {
         Triangle triangle = new Triangle(edges);
         System.out.println(triangle);
     }
+}
+
+interface Writable {
+    void write(String text);
 }
