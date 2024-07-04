@@ -10,12 +10,9 @@ public class TriangleRunner {
 
     private static void anonymousClasses() {
 
-        Runnable anonymousClass = new Runnable() {
-            @Override
-            public void run() {
-                System.out.println("Do something");
-            }
-        };
+        Runnable anonymousClass = () -> System.out.println("Do something");
+
+
         anonymousClass.run();
     }
 
