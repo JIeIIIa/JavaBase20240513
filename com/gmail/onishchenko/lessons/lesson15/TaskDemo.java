@@ -9,7 +9,7 @@ public class TaskDemo {
 //        String status = "TODO";
 
 
-        Task myFirstTask = new Task(Task.Status.TODO, "Learn Java");
+        Task myFirstTask = new Task(Status.TODO, "Learn Java");
 
         System.out.println(myFirstTask);
     }
