@@ -2,7 +2,10 @@ package com.gmail.onishchenko.lessons.lesson15;
 
 public class TaskDemo {
     public static void main(String[] args) {
-        Task myFirstTask = new Task("TODO", "Learn Java");
+        String status = new String("TODO");
+        status = status.intern();
+//        String status = "TODO";
+        Task myFirstTask = new Task(status, "Learn Java");
 
         System.out.println(myFirstTask);
     }
