@@ -17,7 +17,7 @@ public class TaskDemo {
 
         System.out.println("Status as String: " + correctStatus.name());
 
-        status = "TODO";
+        status = "DONE";
         Status newStatus = Status.valueOf(status);
         System.out.println("New status is " + newStatus);
 

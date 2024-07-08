@@ -1,8 +1,22 @@
 package com.gmail.onishchenko.lessons.lesson15;
 
 public enum Status implements Runnable {
-    TODO(42),
-    IN_PROGRESS(7),
+    TODO(42) {
+        @Override
+        public void run() {
+            innerMethod();
+        }
+
+        private void innerMethod() {
+            System.out.println("Custom modification: Running TODO...");
+        }
+    },
+    IN_PROGRESS(7) {
+//        @Override
+//        public void run() {
+//            innerMethod();
+//        }
+    },
     DONE;
 
     private final int estimation;
