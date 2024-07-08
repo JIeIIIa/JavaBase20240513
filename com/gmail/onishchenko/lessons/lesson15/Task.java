@@ -43,13 +43,7 @@ public class Task {
     }
 
     public int estimate() {
-        if (status == Status.TODO) {
-            return 42;
-        } else if (status == Status.IN_PROGRESS) {
-            return 7;
-        } else {
-            return 1;
-        }
+        return status.getEstimation();
     }
 
     @Override

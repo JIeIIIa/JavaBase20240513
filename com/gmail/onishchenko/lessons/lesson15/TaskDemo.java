@@ -9,7 +9,7 @@ public class TaskDemo {
 //        String status = "TODO";
 
 
-        Status correctStatus = Status.TODO;
+        Status correctStatus = Status.DONE;
         Task myFirstTask = new Task(correctStatus, "Learn Java");
 
         System.out.println(myFirstTask);
@@ -17,9 +17,11 @@ public class TaskDemo {
 
         System.out.println("Status as String: " + correctStatus.name());
 
-        status = "IN_PROGRESS";
+        status = "TODO";
         Status newStatus = Status.valueOf(status);
         System.out.println("New status is " + newStatus);
 
+        newStatus.run();
     }
+
 }
