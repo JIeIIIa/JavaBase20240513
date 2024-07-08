@@ -22,6 +22,25 @@ public class TaskDemo {
         System.out.println("New status is " + newStatus);
 
         newStatus.run();
+
+        enumInSwitch(newStatus);
+    }
+
+    private static void enumInSwitch(Status status) {
+        switch (status) {
+            case TODO -> System.out.println("qwe");
+            case IN_PROGRESS -> System.out.println("asd");
+            case DONE -> System.out.println("sdf");
+        }
+
+        switch (status) {
+            case TODO:
+            case IN_PROGRESS:
+                System.out.println("Not started yet");
+                break;
+            case DONE:
+                System.out.println("ALL DONE)");
+        }
     }
 
 }
