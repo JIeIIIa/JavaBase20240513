@@ -7,7 +7,9 @@ public class TaskDemo {
         status = null;
         status = "qwerty";
 //        String status = "TODO";
-        Task myFirstTask = new Task(status, "Learn Java");
+
+
+        Task myFirstTask = new Task(Task.Status.TODO, "Learn Java");
 
         System.out.println(myFirstTask);
     }
