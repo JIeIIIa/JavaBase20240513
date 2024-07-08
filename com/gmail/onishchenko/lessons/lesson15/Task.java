@@ -30,10 +30,11 @@ public class Task {
     private void validate(String status) {
         for (String availableStatus : AVAILABLE_STATUSES) {
             if (availableStatus.equals(status)) {
+//            if (status.equals(availableStatus)) {
                 return;
             }
         }
-        throw new RuntimeException("Unknown status");
+        throw new RuntimeException("Unknown status: " + status);
     }
 
     @Override
