@@ -1,14 +1,35 @@
 package com.gmail.onishchenko.lessons.lesson16;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 public class CalculatorTest {
+    private Calculator calculator;
+
+    @BeforeAll
+    static void beforeAll() {
+        System.out.println("I'm BeforeAll method");
+    }
+
+    @AfterAll
+    static void afterAll() {
+        System.out.println("I'm AfterAll method");
+    }
+
+    @BeforeEach
+    void setUp() {
+        this.calculator = new Calculator();
+        System.out.println("Created object: " + calculator.hashCode());
+    }
+
+    @AfterEach
+    void tearDown() {
+        System.out.println("After each method running...");
+    }
 
     @Test
     void zeroFactorial() {
         // given
-        Calculator calculator = new Calculator();
+        System.out.println("zeroFactorial");
 
         // when
         long result = calculator.factorial(0);
@@ -21,7 +42,7 @@ public class CalculatorTest {
     @Test
     void oneFactorial() {
         // given
-        Calculator calculator = new Calculator();
+        System.out.println("oneFactorial");
 
         // when
         long result = calculator.factorial(1);
@@ -33,7 +54,7 @@ public class CalculatorTest {
     @Test
     void positiveValue() {
         // given
-        Calculator calculator = new Calculator();
+        System.out.println("positiveValue");
 
         // when
         long result = calculator.factorial(3);
@@ -46,7 +67,7 @@ public class CalculatorTest {
     @Test
     void negativeValue() {
         // given
-        Calculator calculator = new Calculator();
+        System.out.println("negativeValue");
 
         // when
         long result = calculator.factorial(-3);
