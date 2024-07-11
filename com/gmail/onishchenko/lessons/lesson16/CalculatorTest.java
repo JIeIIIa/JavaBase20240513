@@ -41,7 +41,6 @@ public class CalculatorTest {
 
 
     @Test
-    @Disabled
     void oneFactorial() {
         // given
         System.out.println("oneFactorial");
