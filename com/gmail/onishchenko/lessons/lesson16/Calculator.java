@@ -14,6 +14,8 @@ public class Calculator {
             result *= i;
         }
 
+
+
         return result;
     }
 }

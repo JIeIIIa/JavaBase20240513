@@ -27,6 +27,7 @@ public class CalculatorTest {
     }
 
     @Test
+    @DisplayName(value = "0! == 1")
     void zeroFactorial() {
         // given
         System.out.println("zeroFactorial");
@@ -40,6 +41,7 @@ public class CalculatorTest {
 
 
     @Test
+    @Disabled
     void oneFactorial() {
         // given
         System.out.println("oneFactorial");
@@ -74,5 +76,12 @@ public class CalculatorTest {
 
         // then
         Assertions.assertEquals(0, result);
+    }
+
+    @Test
+    @DisplayName("Wrong test method. Just for illustration")
+    @Disabled
+    void testException() {
+        Assertions.assertThrows(ArithmeticException.class, () ->  calculator.factorial(1));
     }
 }
