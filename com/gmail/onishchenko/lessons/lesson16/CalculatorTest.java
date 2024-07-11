@@ -1,37 +1,57 @@
 package com.gmail.onishchenko.lessons.lesson16;
 
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 public class CalculatorTest {
-    public static void main(String[] args) {
-        boolean result = zeroFactorial();
-        printTestResult("zeroFactorial", result);
 
-        result = oneFactorial();
-        printTestResult("oneFactorial", result);
-    }
-
-    static boolean zeroFactorial() {
+    @Test
+    void zeroFactorial() {
+        // given
         Calculator calculator = new Calculator();
 
+        // when
         long result = calculator.factorial(0);
 
-        return result == 1;
+        // then
+        Assertions.assertEquals(1, result);
     }
 
 
-    static boolean oneFactorial() {
+    @Test
+    void oneFactorial() {
+        // given
         Calculator calculator = new Calculator();
 
+        // when
         long result = calculator.factorial(1);
 
-        return result == 1;
+        // then
+        Assertions.assertEquals(1, result);
     }
 
-    static void printTestResult(String name, boolean result) {
-        if (result) {
-            System.out.println(name + " .... OK!");
-        } else
-            System.out.println(name + " .... FAILED!");
+    @Test
+    void positiveValue() {
+        // given
+        Calculator calculator = new Calculator();
+
+        // when
+        long result = calculator.factorial(3);
+
+        // then
+        Assertions.assertEquals(6, result);
     }
 
 
+    @Test
+    void negativeValue() {
+        // given
+        Calculator calculator = new Calculator();
+
+        // when
+        long result = calculator.factorial(-3);
+
+        // then
+        Assertions.assertEquals(0, result);
+    }
 }
